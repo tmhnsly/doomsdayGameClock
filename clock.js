@@ -1,49 +1,27 @@
-var siren = new Audio('siren.mp3');
+let siren = new Audio('siren.mp3');
+
+let doomsdayClockOneMin = 180;
+let doomsdayClockOneMax = 300;
+
+let doomsdayClockTwoMin = 120;
+let doomsdayClockTwoMax = 240;
+
+let doomsdayClockThreeMin = 20;
+let doomsdayClockThreeMax = 30;
 
 function doomsdayClockButtonClicked() {
     document.getElementById('doomsdayClockActivityStatus').innerHTML = 'Doomsday Clock Armed';
 }
 
-function doomsdayClockOne() {
+function doomsdayClock(min, max) {
 
     doomsdayClockButtonClicked();
 
-    doomsdayClockOneMin = Math.ceil(180);
-    doomsdayClockOneMax = Math.floor(300);
+    let doomsdayClockSeconds =  Math.floor(Math.random() * (max - min + 1) + min);
 
-    let doomsdayClockOneSeconds =  Math.floor(Math.random() * (doomsdayClockOneMax - doomsdayClockOneMin + 1) + doomsdayClockOneMin);
+    console.log('Doomsday is in ' + doomsdayClockSeconds + ' seconds');
 
-    console.log('Doomsday is in ' + doomsdayClockOneSeconds + ' seconds');
-
-    setTimeout(doomsdayClockActive, doomsdayClockOneSeconds * 1000);
-}
-
-function doomsdayClockTwo() {
-
-    doomsdayClockButtonClicked();
-
-    doomsdayClockTwoMin = Math.ceil(120);
-    doomsdayClockTwoMax = Math.floor(240);
-
-    let doomsdayClockTwoSeconds =  Math.floor(Math.random() * (doomsdayClockTwoMax - doomsdayClockTwoMin + 1) + doomsdayClockTwoMin);
-
-    console.log('Doomsday is in ' + doomsdayClockTwoSeconds + ' seconds');
-
-    setTimeout(doomsdayClockActive, doomsdayClockTwoSeconds * 1000);
-}
-
-function doomsdayClockThree() {
-
-    doomsdayClockButtonClicked();
-
-    doomsdayClockTwoMin = Math.ceil(20);
-    doomsdayClockTwoMax = Math.floor(30);
-
-    let doomsdayClockTwoSeconds =  Math.floor(Math.random() * (doomsdayClockTwoMax - doomsdayClockTwoMin + 1) + doomsdayClockTwoMin);
-
-    console.log('Doomsday is in ' + doomsdayClockTwoSeconds + ' seconds');
-
-    setTimeout(doomsdayClockActive, doomsdayClockTwoSeconds * 1000);
+    setTimeout(doomsdayClockActive, doomsdayClockSeconds * 1000);
 }
 
 function doomsdayClockActive() {
