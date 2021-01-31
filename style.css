@@ -1,10 +1,35 @@
-#clockSettingOneButton {
-    height: 100px;
-    width: 100px;
-}
-
-.doomsdayClock {
+.doomsdayClockPanel {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: grey;
+}
+
+.clockButtonBackground {
+    background: repeating-linear-gradient(
+        45deg,
+        #F7C700,
+        #F7C700 10px,
+        #000000 10px,
+        #000000 20px
+      );
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+
+.clockStartButton {
+    height: 75px;
+    width: 75px;
+    background: red;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.buttonDisplayStyling {
+    background: black;
+    color: green;
 }

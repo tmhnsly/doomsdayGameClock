@@ -6,11 +6,11 @@ let doomsdayClockOneMax = 300;
 let doomsdayClockTwoMin = 120;
 let doomsdayClockTwoMax = 240;
 
-let doomsdayClockThreeMin = 30;
-let doomsdayClockThreeMax = 30;
+let doomsdayClockThreeMin = 5;
+let doomsdayClockThreeMax = 5;
 
 function doomsdayClockButtonClicked() {
-    document.getElementById('doomsdayClockActivityStatus').innerHTML = 'Doomsday Clock Armed';
+    document.getElementById('doomsdayClockActivityStatus').innerHTML = 'Countdown Started';
 }
 
 function doomsdayClock(min, max) {
@@ -29,3 +29,6 @@ function doomsdayClockActive() {
     document.getElementById('doomsdayClockActivityStatus').innerHTML = 'Doomsday Clock'
 }
 
+// add reset button (or stop button) (browser refresh)
+// Pressing button again overrides
+// add rivets around the clock

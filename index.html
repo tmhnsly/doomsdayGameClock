@@ -10,20 +10,26 @@
 <body>
   <script src="clock.js"></script>
 
-    <div class = 'doomsdayClock'>
-        <h1 id = 'doomsdayClockActivityStatus'>Doomsday Clock</h1>
-        <div class = 'doomsdayClockButtons'>
-            <div>
-                <button type="button" id="clockSettingOneButton" onClick="doomsdayClock(doomsdayClockOneMin, doomsdayClockOneMax)">Setting 1</button>
-                <label>3 - 4 Players</label>
-            </div>
-            <div>
-                <button type="button" id="clockSettingOneButton" onClick="doomsdayClock(doomsdayClockTwoMin, doomsdayClockTwoMax)">Setting 2</button>
-                <label>2 Players</label>
-            </div>
-            <div>
-                <button type="button" id="clockSettingOneButton" onClick="doomsdayClock(doomsdayClockThreeMin, doomsdayClockThreeMax)">Setting 3</button>
-                <label>Quick Fire</label>
+    <div>
+        <div class = 'doomsdayClockPanel'>
+            <h1 id = 'doomsdayClockActivityStatus'>Doomsday Clock</h1>
+            <div class = 'doomsdayClockButtons'>
+                
+                <div class='clockButtonBackground'>
+                    <button type="button" class="clockStartButton" onClick="doomsdayClock(doomsdayClockOneMin, doomsdayClockOneMax)">Setting 1</button>
+                    <label class = 'buttonDisplayStyling'>3 - 4 Players Remaining</label>
+                </div>
+
+                <div class='clockButtonBackground'>
+                    <button type="button" class="clockStartButton" onClick="doomsdayClock(doomsdayClockTwoMin, doomsdayClockTwoMax)">Setting 2</button>
+                    <label class = 'buttonDisplayStyling'>2 Players Remaining</label>
+                </div>
+
+                <div class='clockButtonBackground'>
+                    <button type="button" class="clockStartButton" onClick="doomsdayClock(doomsdayClockThreeMin, doomsdayClockThreeMax)">Setting 3</button>
+                    <label class = 'buttonDisplayStyling'>Quick Fire</label>
+                </div>
+
             </div>
         </div>
     </div>
