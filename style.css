@@ -1,0 +1,10 @@
+#clockSettingOneButton {
+    height: 100px;
+    width: 100px;
+}
+
+.doomsdayClock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
