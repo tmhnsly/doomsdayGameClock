@@ -6,7 +6,7 @@ let doomsdayClockOneMax = 300;
 let doomsdayClockTwoMin = 120;
 let doomsdayClockTwoMax = 240;
 
-let doomsdayClockThreeMin = 20;
+let doomsdayClockThreeMin = 30;
 let doomsdayClockThreeMax = 30;
 
 function doomsdayClockButtonClicked() {
@@ -28,3 +28,4 @@ function doomsdayClockActive() {
     siren.play();
     document.getElementById('doomsdayClockActivityStatus').innerHTML = 'Doomsday Clock'
 }
+
