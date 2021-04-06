@@ -4,11 +4,13 @@
 
   <title>DOOMSDAY</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-  <script src="clock.js"></script>
+  <script defer src="clock.js"></script>
 
     <div>
         <div class = 'doomsdayClockPanel'>
@@ -16,18 +18,22 @@
             <div class = 'doomsdayClockButtons'>
                 
                 <div class='clockButtonBackground'>
-                    <button type="button" class="clockStartButton" onClick="doomsdayClock(doomsdayClockOneMin, doomsdayClockOneMax)">Setting 1</button>
-                    <label class = 'buttonDisplayStyling'>3 - 4 Players Remaining</label>
+                    <button id="doomsdayClockButtonOne" type="button" class="clockStartButton"></button>
+                    <label id="doomsdayClockButtonOneDisplay" class = 'buttonDisplayStyling'>3 - 4 Players Remaining</label>
                 </div>
 
                 <div class='clockButtonBackground'>
-                    <button type="button" class="clockStartButton" onClick="doomsdayClock(doomsdayClockTwoMin, doomsdayClockTwoMax)">Setting 2</button>
-                    <label class = 'buttonDisplayStyling'>2 Players Remaining</label>
+                    <button id="doomsdayClockButtonTwo" type="button" class="clockStartButton"></button>
+                    <label id="doomsdayClockButtonTwoDisplay" class = 'buttonDisplayStyling'>2 Players Remaining</label>
                 </div>
 
                 <div class='clockButtonBackground'>
-                    <button type="button" class="clockStartButton" onClick="doomsdayClock(doomsdayClockThreeMin, doomsdayClockThreeMax)">Setting 3</button>
-                    <label class = 'buttonDisplayStyling'>Quick Fire</label>
+                    <button id="doomsdayClockButtonThree" type="button" class="clockStartButton"></button>
+                    <label id="doomsdayClockButtonThreeDisplay" class = 'buttonDisplayStyling'>Quick Fire</label>
+                </div>
+
+                <div class='clockResetButtonContainer'>
+                    <button id="doomsdayClockResetButton" type="button" class="clockResetButton">RESET</button>
                 </div>
 
             </div>
