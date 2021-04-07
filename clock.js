@@ -62,10 +62,3 @@ function doomsdayClockActive() {
     document.getElementById('doomsdayClockButtonTwoDisplay').innerHTML = '2 Players Remaining';
     document.getElementById('doomsdayClockButtonThreeDisplay').innerHTML = 'Quick Fire';
 }
-
-// Pressing button again overrides
-// add rivets around the clock
-// cancelTimeout - pass in timer variable
-
-// MAKE EACH DISPLAY CHANGE TO SHOW ACTIVE
-// MAKE NICE
