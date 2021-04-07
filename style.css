@@ -74,3 +74,29 @@ body {
     color: #66FF66;
 
 }
+
+@media only screen and (max-width: 800px) {
+
+    body {
+      background-color: lightblue;
+    }
+
+    .clockButtonBackground {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    .clockResetButtonContainer {
+        width: 50vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+  }
