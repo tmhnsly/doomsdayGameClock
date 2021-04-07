@@ -1,12 +1,12 @@
 body {
     font-family: "VT323", monospace;
+    background: lightgray;
 }
 
 .doomsdayClockPanel {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: grey;
 }
 
 .clockButtonBackground {
@@ -44,7 +44,6 @@ body {
     stroke: black;
     border-radius: 50px;
     cursor: pointer;
-    border-style: solid;
     border-width: 7.5px;
     border-color: black;
 }
@@ -55,11 +54,9 @@ body {
     margin: 10px;
     background: red;
     stroke: black;
-    border-radius: 10px;
+    border-radius: 7.5px;
     cursor: pointer;
-    border-style: solid;
     border-width: 7.5px;
-    border-color: black;
     font-weight: bold;
     font-size: 1.5rem;
     color: white;
@@ -75,23 +72,36 @@ body {
 
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 450px) {
 
     body {
-      background-color: lightblue;
+        margin: 0%;
+        background: #000000;
+    }
+
+    #doomsdayClockHeader {
+        display: none;
+    }
+
+    .doomsdayClockPanel {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        background: none;
     }
 
     .clockButtonBackground {
         width: 100vw;
+        height: 24vh;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
         margin-bottom: 15px;
     }
 
     .clockResetButtonContainer {
-        width: 50vw;
+        width: 100vw;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -99,4 +109,14 @@ body {
         margin-bottom: 15px;
     }
 
+    .buttonDisplayStyling {
+        font-size: 1.5rem;
+        padding: 20px 15px;
+        width: 60%;
+        margin: 15px 15px 15px 0px;
+        align-content: center;
+        background: black;
+        color: #66FF66;
+    
+    }
   }
