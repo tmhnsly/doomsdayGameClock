@@ -1,4 +1,5 @@
 let siren = new Audio('siren.mp3');
+let buttonClick = new Audio('button.mp3');
 
 let doomsdayClockOneMin = 180;
 let doomsdayClockOneMax = 300;
@@ -12,6 +13,7 @@ let doomsdayClockThreeMax = 30;
 let timer;
 
 document.querySelector('#doomsdayClockButtonOne').addEventListener('click', e => {
+    buttonClick.play();
     e.target.disabled = true;
     document.getElementById('doomsdayClockButtonOneDisplay').innerHTML = 'Countdown Initiated';
     doomsdayClock(doomsdayClockOneMin, doomsdayClockOneMax)
@@ -20,6 +22,7 @@ document.querySelector('#doomsdayClockButtonOne').addEventListener('click', e =>
 })
 
 document.querySelector('#doomsdayClockButtonTwo').addEventListener('click', e => {
+    buttonClick.play();
     e.target.disabled = true;
     doomsdayClock(doomsdayClockTwoMin, doomsdayClockTwoMax)
     document.getElementById('doomsdayClockButtonTwoDisplay').innerHTML = 'Countdown Initiated';
@@ -28,6 +31,7 @@ document.querySelector('#doomsdayClockButtonTwo').addEventListener('click', e =>
 })
 
 document.querySelector('#doomsdayClockButtonThree').addEventListener('click', e => {
+    buttonClick.play();
     e.target.disabled = true;
     doomsdayClock(doomsdayClockThreeMin, doomsdayClockThreeMax)
     document.getElementById('doomsdayClockButtonThreeDisplay').innerHTML = 'Countdown Initiated';
@@ -36,6 +40,7 @@ document.querySelector('#doomsdayClockButtonThree').addEventListener('click', e 
 })
 
 document.querySelector('#doomsdayClockResetButton').addEventListener('click', e => {
+    buttonClick.play();
     location.reload();
 })
 
