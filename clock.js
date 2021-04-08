@@ -49,6 +49,7 @@ function resetDisplayText(display, text) {
 }
 
 function doomsdayClockActive() {
+    siren.src = 'siren.mp3';
     siren.play();
     enableButton('#doomsdayClockButtonOne');
     enableButton('#doomsdayClockButtonTwo');
