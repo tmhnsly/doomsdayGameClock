@@ -19,6 +19,8 @@ document.querySelector('#doomsdayClockButtonOne').addEventListener('click', e =>
     doomsdayClock(doomsdayClockOneMin, doomsdayClockOneMax)
     document.querySelector('#doomsdayClockButtonTwo').disabled = true;
     document.querySelector('#doomsdayClockButtonThree').disabled = true;
+    document.querySelector('#doomsdayClockButtonTwo').style.background = '#A30000';
+    document.querySelector('#doomsdayClockButtonThree').style.background = '#A30000';
 })
 
 document.querySelector('#doomsdayClockButtonTwo').addEventListener('click', e => {
@@ -28,6 +30,8 @@ document.querySelector('#doomsdayClockButtonTwo').addEventListener('click', e =>
     document.getElementById('doomsdayClockButtonTwoDisplay').innerHTML = 'Countdown Initiated';
     document.querySelector('#doomsdayClockButtonOne').disabled = true;
     document.querySelector('#doomsdayClockButtonThree').disabled = true;
+    document.querySelector('#doomsdayClockButtonOne').style.background = '#A30000';
+    document.querySelector('#doomsdayClockButtonThree').style.background = '#A30000';
 })
 
 document.querySelector('#doomsdayClockButtonThree').addEventListener('click', e => {
@@ -37,6 +41,8 @@ document.querySelector('#doomsdayClockButtonThree').addEventListener('click', e 
     document.getElementById('doomsdayClockButtonThreeDisplay').innerHTML = 'Countdown Initiated';
     document.querySelector('#doomsdayClockButtonOne').disabled = true;
     document.querySelector('#doomsdayClockButtonTwo').disabled = true;
+    document.querySelector('#doomsdayClockButtonOne').style.background = '#A30000';
+    document.querySelector('#doomsdayClockButtonTwo').style.background = '#A30000';
 })
 
 document.querySelector('#doomsdayClockResetButton').addEventListener('click', e => {
@@ -54,11 +60,19 @@ function doomsdayClock(min, max) {
 }
 
 function doomsdayClockActive() {
+    
     siren.play();
+
+    // Enable buttons
     document.querySelector('#doomsdayClockButtonOne').disabled = false;
     document.querySelector('#doomsdayClockButtonTwo').disabled = false;
     document.querySelector('#doomsdayClockButtonThree').disabled = false;
+
+    // Reset button display text
     document.getElementById('doomsdayClockButtonOneDisplay').innerHTML = '3 - 4 Players Remaining';
     document.getElementById('doomsdayClockButtonTwoDisplay').innerHTML = '2 Players Remaining';
     document.getElementById('doomsdayClockButtonThreeDisplay').innerHTML = 'Quick Fire';
+
+    // Reset button "light" colour
+    document.querySelectorAll('.clockStartBackground').background = '#CC0605';
 }
