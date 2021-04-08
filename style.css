@@ -69,6 +69,7 @@ body {
     font-size: 1.5rem;
     padding: 10px 15px;
     width: 60%;
+    height: 75px;
     align-content: center;
     background: black;
     color: #66FF66;
@@ -113,9 +114,10 @@ body {
     }
 
     .buttonDisplayStyling {
-        font-size: 1.5rem;
+        font-size: 2rem;
         padding: 20px 15px;
         width: 60%;
+        height: 70%;
         margin: 15px 15px 15px 0px;
         align-content: center;
         background: black;
