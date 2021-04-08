@@ -1,17 +1,17 @@
-let siren = new Audio('siren.mp3');
+const siren = new Audio('siren.mp3');
 
-let doomsdayClockOneMin = 3;
-let doomsdayClockOneMax = 3;
+const doomsdayClockOneMin = 180;
+const doomsdayClockOneMax = 300;
 
-let doomsdayClockTwoMin = 3;
-let doomsdayClockTwoMax = 3;
+const doomsdayClockTwoMin = 120;
+const doomsdayClockTwoMax = 240;
 
-let doomsdayClockThreeMin = 3;
-let doomsdayClockThreeMax = 3;
+const doomsdayClockThreeMin = 30;
+const doomsdayClockThreeMax = 30;
 
-let buttonOneDefaultText = '3 - 4 Players Remaining';
-let buttonTwoDefaultText = '2 Players Remaining';
-let buttonThreeDefaultText = 'Quick Fire';
+const buttonOneDefaultText = '3 - 4 Players Remaining';
+const buttonTwoDefaultText = '2 Players Remaining';
+const buttonThreeDefaultText = 'Quick Fire';
 
 let timer;
 
