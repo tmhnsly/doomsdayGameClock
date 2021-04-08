@@ -1,3 +1,5 @@
+const siren = new Audio('siren.mp3');
+
 const doomsdayClockOneMin = 180;
 const doomsdayClockOneMax = 300;
 
@@ -12,20 +14,6 @@ const buttonTwoDefaultText = '2 Players Remaining';
 const buttonThreeDefaultText = 'Quick Fire';
 
 let timer;
-
-function unlockAudio() {
-    const siren = new Audio('siren.mp3');
-
-    siren.play();
-    siren.pause();
-    siren.currentTime = 0;
-
-    document.body.removeEventListener('click', unlockAudio)
-    document.body.removeEventListener('touchstart', unlockAudio)
-}
-
-document.body.addEventListener('click', unlockAudio);
-document.body.addEventListener('touchstart', unlockAudio);
 
 function doomsdayClock(min, max) {
 
