@@ -9,6 +9,10 @@ let doomsdayClockTwoMax = 3;
 let doomsdayClockThreeMin = 3;
 let doomsdayClockThreeMax = 3;
 
+let buttonOneDefaultText = '3 - 4 Players Remaining';
+let buttonTwoDefaultText = '2 Players Remaining';
+let buttonThreeDefaultText = 'Quick Fire';
+
 let timer;
 
 function doomsdayClock(min, max) {
@@ -24,9 +28,8 @@ function disableButton(button) {
     document.querySelector(button).disabled = true;
 }
 
-function initiateCountdown(display) {
-    document.getElementById(display).innerText = 'Countdown Initiated';
-
+function enableButton(button) {
+    document.querySelector(button).disabled = false;
 }
 
 function darkenButtonColour(button) {
@@ -37,14 +40,12 @@ function resetButtonColour(button) {
     document.querySelector(button).style.background = '#FF0000';
 }
 
-function resetDisplayText() {
-    document.getElementById('doomsdayClockButtonOneDisplay').innerText = '3 - 4 Players Remaining';
-    document.getElementById('doomsdayClockButtonTwoDisplay').innerText = '2 Players Remaining';
-    document.getElementById('doomsdayClockButtonThreeDisplay').innerText = 'Quick Fire';
+function initiateCountdown(display) {
+    document.getElementById(display).innerText = 'Countdown Initiated';
 }
 
-function enableButton(button) {
-    document.querySelector(button).disabled = false;
+function resetDisplayText(display, text) {
+    document.getElementById(display).innerText = text;
 }
 
 function doomsdayClockActive() {
@@ -52,12 +53,13 @@ function doomsdayClockActive() {
     enableButton('#doomsdayClockButtonOne');
     enableButton('#doomsdayClockButtonTwo');
     enableButton('#doomsdayClockButtonThree');
-    resetDisplayText();
+    resetDisplayText('doomsdayClockButtonOneDisplay', buttonOneDefaultText);
+    resetDisplayText('doomsdayClockButtonTwoDisplay', buttonTwoDefaultText);
+    resetDisplayText('doomsdayClockButtonThreeDisplay', buttonThreeDefaultText);
     resetButtonColour('#doomsdayClockButtonOne');
     resetButtonColour('#doomsdayClockButtonTwo');
     resetButtonColour('#doomsdayClockButtonThree');
 }
-
 
 document.querySelector('#doomsdayClockButtonOne').addEventListener('click', e => {
     doomsdayClock(doomsdayClockOneMin, doomsdayClockOneMax)
