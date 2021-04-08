@@ -12,35 +12,36 @@ let doomsdayClockThreeMax = 30;
 
 let timer;
 
+function disableButton(button) {
+    document.querySelector(button).disabled = true;
+}
+
 document.querySelector('#doomsdayClockButtonOne').addEventListener('click', e => {
-    buttonClick.play();
+    doomsdayClock(doomsdayClockOneMin, doomsdayClockOneMax)
     e.target.disabled = true;
     document.getElementById('doomsdayClockButtonOneDisplay').innerText = 'Countdown Initiated';
-    doomsdayClock(doomsdayClockOneMin, doomsdayClockOneMax)
-    document.querySelector('#doomsdayClockButtonTwo').disabled = true;
-    document.querySelector('#doomsdayClockButtonThree').disabled = true;
+    disableButton('#doomsdayClockButtonTwo');
+    disableButton('#doomsdayClockButtonThree');
     document.querySelector('#doomsdayClockButtonTwo').style.background = '#A30000';
     document.querySelector('#doomsdayClockButtonThree').style.background = '#CC0605';
 })
 
 document.querySelector('#doomsdayClockButtonTwo').addEventListener('click', e => {
-    buttonClick.play();
-    e.target.disabled = true;
     doomsdayClock(doomsdayClockTwoMin, doomsdayClockTwoMax)
+    e.target.disabled = true;
     document.getElementById('doomsdayClockButtonTwoDisplay').innerText = 'Countdown Initiated';
-    document.querySelector('#doomsdayClockButtonOne').disabled = true;
-    document.querySelector('#doomsdayClockButtonThree').disabled = true;
+    disableButton('#doomsdayClockButtonOne');
+    disableButton('#doomsdayClockButtonThree');
     document.querySelector('#doomsdayClockButtonOne').style.background = '#A30000';
     document.querySelector('#doomsdayClockButtonThree').style.background = '#A30000';
 })
 
 document.querySelector('#doomsdayClockButtonThree').addEventListener('click', e => {
-    buttonClick.play();
-    e.target.disabled = true;
     doomsdayClock(doomsdayClockThreeMin, doomsdayClockThreeMax)
+    e.target.disabled = true;
     document.getElementById('doomsdayClockButtonThreeDisplay').innerText = 'Countdown Initiated';
-    document.querySelector('#doomsdayClockButtonOne').disabled = true;
-    document.querySelector('#doomsdayClockButtonTwo').disabled = true;
+    disableButton('#doomsdayClockButtonOne');
+    disableButton('#doomsdayClockButtonTwo');
     document.querySelector('#doomsdayClockButtonOne').style.background = '#A30000';
     document.querySelector('#doomsdayClockButtonTwo').style.background = '#A30000';
 })

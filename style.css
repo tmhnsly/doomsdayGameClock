@@ -123,3 +123,10 @@ body {
         color: #66FF66;
     }
   }
+
+  @media only screen and (max-width: 330px) {
+
+    .buttonDisplayStyling {
+        font-size: 1.6rem;
+    }
+  }
