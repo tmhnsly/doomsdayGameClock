@@ -15,19 +15,19 @@ let timer;
 document.querySelector('#doomsdayClockButtonOne').addEventListener('click', e => {
     buttonClick.play();
     e.target.disabled = true;
-    document.getElementById('doomsdayClockButtonOneDisplay').innerHTML = 'Countdown Initiated';
+    document.getElementById('doomsdayClockButtonOneDisplay').innerText = 'Countdown Initiated';
     doomsdayClock(doomsdayClockOneMin, doomsdayClockOneMax)
     document.querySelector('#doomsdayClockButtonTwo').disabled = true;
     document.querySelector('#doomsdayClockButtonThree').disabled = true;
     document.querySelector('#doomsdayClockButtonTwo').style.background = '#A30000';
-    document.querySelector('#doomsdayClockButtonThree').style.background = '#A30000';
+    document.querySelector('#doomsdayClockButtonThree').style.background = '#CC0605';
 })
 
 document.querySelector('#doomsdayClockButtonTwo').addEventListener('click', e => {
     buttonClick.play();
     e.target.disabled = true;
     doomsdayClock(doomsdayClockTwoMin, doomsdayClockTwoMax)
-    document.getElementById('doomsdayClockButtonTwoDisplay').innerHTML = 'Countdown Initiated';
+    document.getElementById('doomsdayClockButtonTwoDisplay').innerText = 'Countdown Initiated';
     document.querySelector('#doomsdayClockButtonOne').disabled = true;
     document.querySelector('#doomsdayClockButtonThree').disabled = true;
     document.querySelector('#doomsdayClockButtonOne').style.background = '#A30000';
@@ -38,7 +38,7 @@ document.querySelector('#doomsdayClockButtonThree').addEventListener('click', e 
     buttonClick.play();
     e.target.disabled = true;
     doomsdayClock(doomsdayClockThreeMin, doomsdayClockThreeMax)
-    document.getElementById('doomsdayClockButtonThreeDisplay').innerHTML = 'Countdown Initiated';
+    document.getElementById('doomsdayClockButtonThreeDisplay').innerText = 'Countdown Initiated';
     document.querySelector('#doomsdayClockButtonOne').disabled = true;
     document.querySelector('#doomsdayClockButtonTwo').disabled = true;
     document.querySelector('#doomsdayClockButtonOne').style.background = '#A30000';
