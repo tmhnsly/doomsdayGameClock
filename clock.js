@@ -1,5 +1,3 @@
-const siren = new Audio('siren.mp3');
-
 const doomsdayClockOneMin = 180;
 const doomsdayClockOneMax = 300;
 
@@ -14,6 +12,20 @@ const buttonTwoDefaultText = '2 Players Remaining';
 const buttonThreeDefaultText = 'Quick Fire';
 
 let timer;
+
+function unlockAudio() {
+    const siren = new Audio('siren.mp3');
+
+    siren.play();
+    siren.pause();
+    siren.currentTime = 0;
+
+    document.body.removeEventListener('click', unlockAudio)
+    document.body.removeEventListener('touchstart', unlockAudio)
+}
+
+document.body.addEventListener('click', unlockAudio);
+document.body.addEventListener('touchstart', unlockAudio);
 
 function doomsdayClock(min, max) {
 
@@ -62,7 +74,6 @@ function doomsdayClockActive() {
 }
 
 document.querySelector('#doomsdayClockButtonOne').addEventListener('click', e => {
-    siren.muted = false;
     doomsdayClock(doomsdayClockOneMin, doomsdayClockOneMax)
     disableButton('#doomsdayClockButtonOne');
     disableButton('#doomsdayClockButtonTwo');
@@ -73,7 +84,6 @@ document.querySelector('#doomsdayClockButtonOne').addEventListener('click', e =>
 })
 
 document.querySelector('#doomsdayClockButtonTwo').addEventListener('click', e => {
-    siren.muted = false;
     doomsdayClock(doomsdayClockTwoMin, doomsdayClockTwoMax)
     disableButton('#doomsdayClockButtonOne');
     disableButton('#doomsdayClockButtonTwo');
@@ -84,7 +94,6 @@ document.querySelector('#doomsdayClockButtonTwo').addEventListener('click', e =>
 })
 
 document.querySelector('#doomsdayClockButtonThree').addEventListener('click', e => {
-    siren.muted = false;
     doomsdayClock(doomsdayClockThreeMin, doomsdayClockThreeMax)
     disableButton('#doomsdayClockButtonOne');
     disableButton('#doomsdayClockButtonTwo');
@@ -95,6 +104,5 @@ document.querySelector('#doomsdayClockButtonThree').addEventListener('click', e 
 })
 
 document.querySelector('#doomsdayClockResetButton').addEventListener('click', e => {
-    siren.muted = false;
     location.reload();
 })
