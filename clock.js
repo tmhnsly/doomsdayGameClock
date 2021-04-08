@@ -82,6 +82,7 @@ document.querySelector('#doomsdayClockButtonTwo').addEventListener('click', e =>
 })
 
 document.querySelector('#doomsdayClockButtonThree').addEventListener('click', e => {
+    siren.play();
     doomsdayClock(doomsdayClockThreeMin, doomsdayClockThreeMax)
     disableButton('#doomsdayClockButtonOne');
     disableButton('#doomsdayClockButtonTwo');
