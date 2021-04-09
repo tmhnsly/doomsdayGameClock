@@ -62,6 +62,8 @@ function doomsdayClockActive() {
 }
 
 document.querySelector('#doomsdayClockButtonOne').addEventListener('click', e => {
+    siren.play();
+    siren.pause();
     doomsdayClock(doomsdayClockOneMin, doomsdayClockOneMax)
     disableButton('#doomsdayClockButtonOne');
     disableButton('#doomsdayClockButtonTwo');
@@ -72,6 +74,8 @@ document.querySelector('#doomsdayClockButtonOne').addEventListener('click', e =>
 })
 
 document.querySelector('#doomsdayClockButtonTwo').addEventListener('click', e => {
+    siren.play();
+    siren.pause();
     doomsdayClock(doomsdayClockTwoMin, doomsdayClockTwoMax)
     disableButton('#doomsdayClockButtonOne');
     disableButton('#doomsdayClockButtonTwo');
@@ -83,6 +87,7 @@ document.querySelector('#doomsdayClockButtonTwo').addEventListener('click', e =>
 
 document.querySelector('#doomsdayClockButtonThree').addEventListener('click', e => {
     siren.play();
+    siren.pause();
     doomsdayClock(doomsdayClockThreeMin, doomsdayClockThreeMax)
     disableButton('#doomsdayClockButtonOne');
     disableButton('#doomsdayClockButtonTwo');
