@@ -48,6 +48,14 @@ function resetDisplayText(display, text) {
     document.getElementById(display).innerText = text;
 }
 
+function addActiveButtonAnimation(button){
+    document.querySelector(button).classList.add('activeButton'); 
+}
+
+function removeActiveButtonAnimation(button){
+    document.querySelector(button).classList.remove('activeButton'); 
+}
+
 function doomsdayClockActive() {
     siren.play();
     enableButton('#doomsdayClockButtonOne');
@@ -59,6 +67,9 @@ function doomsdayClockActive() {
     resetButtonColour('#doomsdayClockButtonOne');
     resetButtonColour('#doomsdayClockButtonTwo');
     resetButtonColour('#doomsdayClockButtonThree');
+    removeActiveButtonAnimation('#doomsdayClockButtonOne');
+    removeActiveButtonAnimation('#doomsdayClockButtonTwo');
+    removeActiveButtonAnimation('#doomsdayClockButtonThree');
 }
 
 document.querySelector('#doomsdayClockButtonOne').addEventListener('click', e => {
@@ -69,6 +80,7 @@ document.querySelector('#doomsdayClockButtonOne').addEventListener('click', e =>
     disableButton('#doomsdayClockButtonTwo');
     disableButton('#doomsdayClockButtonThree');
     initiateCountdown('doomsdayClockButtonOneDisplay');
+    addActiveButtonAnimation('#doomsdayClockButtonOne');
     darkenButtonColour('#doomsdayClockButtonTwo');
     darkenButtonColour('#doomsdayClockButtonThree');
 })
@@ -82,6 +94,7 @@ document.querySelector('#doomsdayClockButtonTwo').addEventListener('click', e =>
     disableButton('#doomsdayClockButtonThree');
     initiateCountdown('doomsdayClockButtonTwoDisplay');
     darkenButtonColour('#doomsdayClockButtonOne');
+    addActiveButtonAnimation('#doomsdayClockButtonTwo');
     darkenButtonColour('#doomsdayClockButtonThree');
 })
 
@@ -95,6 +108,7 @@ document.querySelector('#doomsdayClockButtonThree').addEventListener('click', e 
     initiateCountdown('doomsdayClockButtonThreeDisplay');
     darkenButtonColour('#doomsdayClockButtonOne');
     darkenButtonColour('#doomsdayClockButtonTwo');
+    addActiveButtonAnimation('#doomsdayClockButtonThree');
 })
 
 document.querySelector('#doomsdayClockResetButton').addEventListener('click', e => {
